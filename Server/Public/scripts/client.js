@@ -1,3 +1,5 @@
+const { data } = require("jquery");
+
 console.log('Hello from JS');
 $(document).ready(onReady);
 
@@ -7,10 +9,17 @@ function onReady(){
 
 }
 
-function equals(){
+function equals(){//post function
 let num1 = $('#num1').val();
 let num2 = $('#num2').val();
-console.log('clicked');
+console.log('clicked',num1,num2);
+$.ajax({
+    method: 'POST',
+    url:'/calculationPost',
+    data:{
+        //incoming data
+    }
+})
 }
 
 function getNumbers(){
