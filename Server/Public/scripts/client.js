@@ -1,3 +1,4 @@
+const { response } = require("express");
 const { data } = require("jquery");
 
 console.log('Hello from JS');
@@ -5,7 +6,7 @@ $(document).ready(onReady);
 
 function onReady(){
     console.log('Hello from jquery');
-    $('#equals').on('click',equals)
+    $('#equals').on('click',getNumbers)
 
 }
 
@@ -17,10 +18,18 @@ $.ajax({
     method: 'POST',
     url:'/calculationPost',
     data:{
-        //incoming data
+        num1: num1,
+        num2: num2
     }
-})
+}).then(function(response){
+    console.log('response',response);
+    //getNumbers();
+}).catch(function(error){
+    alert(error);
+});
 }
+
+
 
 function getNumbers(){
     console.log('get numbers');
@@ -31,5 +40,15 @@ function getNumbers(){
         console.log('response',response);
        //appendToDom(response); 
     });
+    
+}
+
+function appendToDom(dataToAppend){
+    console.log('calcHistory');
+    $('#calcHistory').append(`
+        <li>
+        dataToAppend
+        </li>`
+        );
     
 }

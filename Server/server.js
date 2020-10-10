@@ -17,11 +17,11 @@ app.get('/calculation',(req,res)=>{
     
 }); 
 
-app.get('/calculationPost',(req,res)=>{
-    console.log('hello from post',req.body);
+// app.post('/calculationPost',(req,res)=>{
+//     console.log('hello from post',req.body);
 
     
-})
+// })
 
 
 
