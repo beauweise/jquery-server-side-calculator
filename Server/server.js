@@ -7,23 +7,22 @@ const port = 5000;
 
 app.use(express.static('server/public'));
 
-app.use(bodyParser.urlencoded({exteded: true}))
+app.use(bodyParser.urlencoded({exteded: true}));
 
 let numbers = [];
 
 app.get('/calculation',(req,res)=>{
     console.log('hi from get');
-    res.send(200)
+    res.send(numbers);
 }); 
 
 app.post('/calculationPost',(req,res)=>{
     console.log('hello from post',req.body);
-    res.sendStatus(418);
+    numbers.push(req.body);
+    res.sendStatus(200);
 
     
-})
-
-
+});
 
 
 
