@@ -9,11 +9,13 @@ app.use(express.static('server/public'));
 
 app.use(bodyParser.urlencoded({exteded: true}))
 
+let numbers = [];
+
 app.get('/calculation',(req,res)=>{
     console.log('hi from get');
     res.send(200)
     
-});
+}); 
 
 app.get('/calculationPost',(req,res)=>{
     console.log('hello from post',req.body);
