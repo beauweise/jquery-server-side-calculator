@@ -14,14 +14,14 @@ let numbers = [];
 app.get('/calculation',(req,res)=>{
     console.log('hi from get');
     res.send(200)
-    
 }); 
 
-// app.post('/calculationPost',(req,res)=>{
-//     console.log('hello from post',req.body);
+app.post('/calculationPost',(req,res)=>{
+    console.log('hello from post',req.body);
+    res.sendStatus(418);
 
     
-// })
+})
 
 
 

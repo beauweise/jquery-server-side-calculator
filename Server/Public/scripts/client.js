@@ -1,5 +1,4 @@
-const { response } = require("express");
-const { data } = require("jquery");
+
 
 console.log('Hello from JS');
 $(document).ready(onReady);
@@ -10,24 +9,24 @@ function onReady(){
 
 }
 
-function equals(){//post function
-let num1 = $('#num1').val();
-let num2 = $('#num2').val();
-console.log('clicked',num1,num2);
-$.ajax({
-    method: 'POST',
-    url:'/calculationPost',
-    data:{
-        num1: num1,
-        num2: num2
-    }
-}).then(function(response){
-    console.log('response',response);
-    //getNumbers();
-}).catch(function(error){
-    alert(error);
-});
-}
+// function equals(){              //post function
+//     let num1 = $('#num1').val();
+//     let num2 = $('#num2').val();
+//     console.log('clicked',num1,num2);
+//     $.ajax({
+//     method: 'POST',
+//     url:'/calculationPost',
+//     data:{
+//         num1: num1,
+//         num2: num2
+//     }
+// }).then(function(response){
+//     console.log('response',response);
+//     //getNumbers();
+// }).catch(function(error){
+//     alert(error);
+// });
+// }
 
 
 
@@ -47,7 +46,7 @@ function appendToDom(dataToAppend){
     console.log('calcHistory');
     $('#calcHistory').append(`
         <li>
-        dataToAppend
+        dataToAppend()
         </li>`
         );
     
