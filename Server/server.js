@@ -9,7 +9,11 @@ app.use(express.static('server/public'));
 
 app.use(bodyParser.urlencoded({exteded: true}))
 
-
+app.get('/calculation',(req,res)=>{
+    console.log('hi from get');
+    res.send(200)
+    
+})
 
 
 
