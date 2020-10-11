@@ -31,9 +31,20 @@ app.post('/calculationPost',(req,res)=>{
 
 function actualMath(math){
     for(let i = 0; i<math.length; i++)
-    if(math[i].action == add){
+    if(math[i].action == 'add'){
         let answer = math[i].num1 + math[i].num2
     }
+    if(math[i].action == 'subtract'){
+        let answer = math[i].num1 - math[i].num2
+    }
+    if(math[i].action == 'multiply'){
+        let answer = math[i].num1 * math[i].num2
+    }
+    if(math[i].action == 'divide'){
+        let answer = math[i].num1 / math[i].num2
+    }
+    
+    return answer;
 }
 
 
