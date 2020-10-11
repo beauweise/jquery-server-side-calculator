@@ -10,21 +10,22 @@ function onReady(){
     $('#subtraction').on('click',subtraction);
     $('#multiplication').on('click',multiplication);
     $('#division').on('click',division);
+    $('#clear').on('click',clear);
     
 }
 let operator = "";
 
 function addition(){
-    let operator = 'add';
-    }
+    operator = 'add';
+}
 function subtraction() {
-    let operator = 'subtract'; 
+    operator = 'subtract'; 
 }
 function multiplication(){
-    let operator = 'multiply';
+    operator = 'multiply';
 }
 function division() {
-    let operator = 'divide';
+    operator = 'divide';
 }
 
 

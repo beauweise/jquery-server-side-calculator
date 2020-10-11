@@ -15,6 +15,11 @@ app.get('/calculation',(req,res)=>{
     console.log('hi from get');
     res.send(numbers);
 }); 
+// app.get('/actualMath',(req.res)=>{
+//     console.log('hi');
+    
+//     res.send(numbers);
+// });
 
 app.post('/calculationPost',(req,res)=>{
     console.log('hello from post',req.body);
@@ -23,6 +28,13 @@ app.post('/calculationPost',(req,res)=>{
 
     
 });
+
+function actualMath(math){
+    for(let i = 0; i<math.length; i++)
+    if(math[i].action == add){
+        let answer = math[i].num1 + math[i].num2
+    }
+}
 
 
 
