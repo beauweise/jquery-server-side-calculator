@@ -11,7 +11,7 @@ function onReady(){
     $('#multiplication').on('click',multiplication);// * button listener
     $('#division').on('click',division);// /button listener
     $('#clear').on('click',clear);// C button listener
-    
+    appendToDom();
 }
 let operator = "";// empty array
 
@@ -38,7 +38,7 @@ function equals(){
     let num1 = $('#num1').val();//input values when clicked
     let num2 = $('#num2').val();
     
-    if(num1 == '' || num2 == ''){// not allowing for empty inputs
+    if(num1 == '' || num2 == ''|| operator == ''){// not allowing for empty inputs
         alert('Please enter all info');
         return;
     }
