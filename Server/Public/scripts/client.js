@@ -67,7 +67,7 @@ function getNumbers(){
         url:'/calculation'
     }).then(function(response){
         console.log('response',response);
-       appendToDom(response); // appending response from server to DOM
+        appendToDom(response); // appending response from server to DOM
     }).catch(function(error){
         alert(error);
     });
@@ -81,8 +81,8 @@ function appendToDom(array){//function that what will be appended to DOM
     $('#calcHistory').append(`
         <li>
         ${array[i].num1}${array[i].action}${array[i].num2}=${array[i].answer}
-        </li>`
-        );
+        </li>
+        `);
     $('#answer').empty();
     $('#answer').append(array[i].answer);    
     } 
