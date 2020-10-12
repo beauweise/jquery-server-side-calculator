@@ -15,17 +15,21 @@ function onReady(){
 }
 let operator = "";
 
+function clear(){
+    $('#num1').val('');
+    $('#num2').val('');
+}
 function addition(){
-    operator = 'add';
+    operator = '+';
 }
 function subtraction() {
-    operator = 'subtract'; 
+    operator = '-'; 
 }
 function multiplication(){
-    operator = 'multiply';
+    operator = '*';
 }
 function division() {
-    operator = 'divide';
+    operator = '/';
 }
 
 
@@ -74,11 +78,14 @@ function getNumbers(){
 
 function appendToDom(array){
     console.log('calcHistory',array);
+    $('#calcHistory').empty();
     for(let i=0; i < array.length; i++){
     $('#calcHistory').append(`
         <li>
-        dataToAppend(${array[i].num1}type ${array[i].num2})
+        ${array[i].num1}${array[i].action}${array[i].num2}=${array[i].answer}
         </li>`
         );
+    $('#answer').empty();
+    $('#answer').append(array[i].answer);    
     } 
 }
